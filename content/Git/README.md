@@ -2,8 +2,11 @@
 
 ![Linus](/content/img/linus-torvalds-about-nvidia-june-2012.jpg)
 
+<<<<<<< HEAD
 ![Some text](/content/img/mermaid_11.png)
 
+=======
+>>>>>>> 255df40356ef6007d18b0af44ceb711cfa050d01
 ### Зачем нужен Git?
 
 #### Почему не флешка?
