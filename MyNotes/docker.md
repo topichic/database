@@ -12,4 +12,4 @@
 - Форматирование информации в Markdown
 
 ### 🔗 Ссылки
-- Репозиторий: https://github.com/topichic/database/Mynotes/docker.md
+- Репозиторий: https://github.com/topichic/MyNotes/docker.md
