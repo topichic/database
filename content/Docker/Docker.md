@@ -2,8 +2,6 @@
 
 ## Docker
 
-<<<<<<< HEAD
-=======
 ### Структура документа
 
 - [Знакомство. Получить и запустить Docker](#получить-docker)
@@ -22,7 +20,6 @@
   - [Docket Compose](/content/Docker/DockerCompose)
   - []()
 
->>>>>>> 255df40356ef6007d18b0af44ceb711cfa050d01
 ### Получить Docker
 
 - **Windows**
@@ -62,15 +59,11 @@
         - `systemctl enable --now docker`
         - `reboot`
 
-<<<<<<< HEAD
-### Начало работы
-=======
 > Важно перезагрузить компьютер после включения WSL 2.0 и установки Docker!
 
 ### Быстрый старт
 
 Начало работы
->>>>>>> 255df40356ef6007d18b0af44ceb711cfa050d01
 
 Проверить Docker:
 ```shell
@@ -99,11 +92,8 @@ docker run hello-world
 
 > Эта команда загрузит образ, установит его, создаст и запустит контейнер и сразу остановит.
 
-<<<<<<< HEAD
-=======
 #### Управление контейнером и образом, базовые команды
 
->>>>>>> 255df40356ef6007d18b0af44ceb711cfa050d01
 Показать запущенные контейнеры:
 ```shell
 docker ps
@@ -112,6 +102,11 @@ docker ps
 Покзать все контейнеры, включая остановленные:
 ```shell
 docker ps -a
+```
+
+Показать загруженные Docker-образы
+```shell
+docker images
 ```
 
 Показать детальную информацию по выбранному образу
@@ -138,11 +133,7 @@ docker images
 docker rmi hello-world
 ```
 
-<<<<<<< HEAD
-#### Nginx
-=======
 #### Установка и запуск из готового образа Nginx
->>>>>>> 255df40356ef6007d18b0af44ceb711cfa050d01
 
 Установить контейнер **Nginx**
 ```shell
@@ -414,35 +405,6 @@ docker images
 docker rmi postgres:15
 ```
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 # Проверить результат
 
 ```shell
@@ -475,6 +437,7 @@ docker rm $(docker ps -aq)
 
 #### Контейнеры
 
+Удалить только остановленные контейнеры
 ```shell
 docker container prune
 ```
@@ -510,14 +473,15 @@ docker stop $(docker ps -q)
 docker image prune
 ```
 
-Удалить все неиспользуемые образы (те, на которые нет ссылок)
-```shell
-docker image prune
-```
 С подтверждением перед удалением
 ```shell
 docker image prune -a
 ```
 
 > На вопрос "Are you sure you want to continue?" ответьте 'y'
->>>>>>> 255df40356ef6007d18b0af44ceb711cfa050d01
+
+
+Удалить все образы
+```shell
+docker rmi -f $(docker images -q)
+```
