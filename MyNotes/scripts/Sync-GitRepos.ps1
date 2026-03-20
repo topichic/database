@@ -163,35 +163,6 @@ function Copy-RepositoryContents {
         Write-ColorInfo "Сканирую исходную папку..." -Color Blue
         $sourceItems = Get-ChildItem -Path $SourcePath -Force | Where-Object { $_.Name -ne ".git" }
         
-        # Удаляем всё содержимое целевой папки кроме .git
-        Write-ColorInfo "Очищаю целевую папку от старых файлов..." -Color Yellow
-        
-        $targetItems = Get-ChildItem -Path $TargetPath -Force | Where-Object { $_.Name -ne ".git" }
-        $deletedCount = 0
-        
-        foreach ($item in $targetItems) {
-            $itemPath = Join-Path $TargetPath $item.Name
-            try {
-                if ($item.PSIsContainer) {
-                    Remove-Item -Path $itemPath -Recurse -Force -ErrorAction Stop
-                    if ($SCRIPT:VERBOSE_OUTPUT) {
-                        Write-Host "  [УДАЛЕНО] Папка: $($item.Name)" -ForegroundColor Gray
-                    }
-                } else {
-                    Remove-Item -Path $itemPath -Force -ErrorAction Stop
-                    if ($SCRIPT:VERBOSE_OUTPUT) {
-                        Write-Host "  [УДАЛЕНО] Файл: $($item.Name)" -ForegroundColor Gray
-                    }
-                }
-                $deletedCount++
-            }
-            catch {
-                Write-Warning "Не удалось удалить $($item.Name): $($_.Exception.Message)"
-            }
-        }
-        
-        Write-ColorInfo "Удалено элементов: $deletedCount" -Color Green
-        
         # Копируем новые файлы из исходной папки
         Write-ColorInfo "Копирую новые файлы..." -Color Green
         
