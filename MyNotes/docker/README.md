@@ -19,3 +19,14 @@ docker --version
 
 # Тестовый запуск
 docker run hello-world
+
+# Список процессов
+ docker ps -a
+
+# Завершить все процессы
+docker container prune
+
+# Список картинок
+docker images
+
+# Удалить картинки
