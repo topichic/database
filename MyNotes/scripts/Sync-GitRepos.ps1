@@ -1,7 +1,7 @@
 powershell
 
 $SCRIPT:SOURCE_REPO_DEFAULT = "C:\Users\User\mfua"
-$SCRIPT:TARGET_REPO_DEFAULT = "C:\Users\YourUsername\Projects\target-repo"
+$SCRIPT:TARGET_REPO_DEFAULT = "C:\Users\User\database"
 $SCRIPT:ENABLE_PUSH = $false
 
 # Показывать подробный вывод? (true/false)
