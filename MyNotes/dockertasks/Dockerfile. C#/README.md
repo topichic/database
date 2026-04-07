@@ -68,4 +68,5 @@ docker run -d -p 8081:80 --name myapp myapp
 ```
 
 После запуска откройте браузер по адресу [http://localhost:8081](http://localhost:8081) — вы должны увидеть сообщение **Hello from Docker! Привет из Docker!**
-![](/MyNotes/img/TASK%20Dockerfile.%20C#.png)
+
+![](/MyNotes\img\TASKDockerfile.png)
