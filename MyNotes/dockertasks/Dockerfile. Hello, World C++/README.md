@@ -60,4 +60,5 @@ docker run -it --entrypoint sh cpp-hello
 ```shell
 exit
 ```
+
 ![](/MyNotes/img/TASK%20Dockerfile.%20Hello,%20World%20C++.png)

@@ -88,4 +88,5 @@ docker run -d --name my-running-app -p 8082:5000 my-flask-app
 ### 7. Проверка работы
 
 [Откройте браузер и перейдите по адресу http://localhost:8082](http://localhost:8082)
+
 ![](/MyNotes/img/TASK%20Flask+Python.png)
