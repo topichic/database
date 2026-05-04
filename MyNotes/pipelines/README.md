@@ -1,22 +1,3 @@
-## [my-node-app](https://github.com/topichic/my-node-app.git)
-![](/MyNotes/pipelines/img/%20NodeJS1.png)
-![](/MyNotes/pipelines/img/%20NodeJS2.png)
-## [my-go-app](https://github.com/topichic/my-go-app.git)
-![](/MyNotes/pipelines/img/go3.png)
-![](/MyNotes/pipelines/img/go.png)
-![](/MyNotes/pipelines/img/go2.png)
-![](/MyNotes/pipelines/img/go4.png)
-## [rust-js-app](https://github.com/topichic/my-rust-app.git)
-![](/MyNotes/pipelines/img/rust-js2.png)
-![](/MyNotes/pipelines/img/rust-js.png)
-![](/MyNotes/pipelines/img/rust-js3.png)
-## [my-php-app](https://github.com/topichic/my-php-app.git)
-![](/MyNotes/pipelines/img/php2.png)
-![](/MyNotes/pipelines/img/php.png)
-## [my-cpp-app](https://github.com/topichic/my-cpp-app.git)
-![](/MyNotes/pipelines/img/my-cpp-app.png)
-![](/MyNotes/pipelines/img/my-cpp-app2.png)
-
 # 🚀 DevOps Portfolio — CI/CD Pipeline Examples
 
 Коллекция демонстрационных проектов с настроенными CI/CD пайплайнами на **GitHub Actions**
@@ -166,6 +147,3 @@ docker build -t my-php-app -f Dockerfile .
 # C++
 docker build -t my-cpp-app -f Dockerfile .
 ```
-
-## Репозиторий преподавателя
-![gitflic](https://gitflic.ru/project/rurewa/mfua.git)
