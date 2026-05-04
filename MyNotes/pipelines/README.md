@@ -8,11 +8,8 @@
 
 - [Проекты](#-проекты)
 - [Скриншоты пайплайнов](#-скриншоты-cicd-пайплайнов)
-- [Что реализовано в каждом проекте](#-что-реализовано-в-каждом-проекте)
+- [Что реализовано в каждом проекте](#что-реализовано-в-каждом-проекте)
 - [Быстрый старт](#-быстрый-старт)
-- [Структура проекта](#-структура-проекта)
-- [Используемые технологии](#-используемые-технологии)
-- [Лицензия](#-лицензия)
 
 ---
 
@@ -68,7 +65,7 @@
 
 ---
 
-## ⚙️ Что реализовано в каждом проекте
+## Что реализовано в каждом проекте
 
 ### ✅ Node.js
 
@@ -129,21 +126,52 @@
 git clone https://github.com/topichic/my-node-app.git
 cd my-node-app
 ```
+---
+## Локальная сборка Docker образа
 
-### Локальная сборка Docker образа
-```bash
-# Node.js
-docker build -t my-node-app -f Dockerfile .
 
-# Go
-docker build -t my-go-app -f Dockerfile .
+### Node.js
+```shell
+docker build -t my-node-app:latest .
+```
+Создание и запуск контейнера:
+```shell
+docker run --rm my-node-app:latest
+```
 
-# Rust
-docker build -t my-rust-app -f Dockerfile .
+### Go
+```shell
+docker build -t my-go-app:latest .
+```
+Создание и запуск контейнера:
+```shell
+docker run --rm my-go-app:latest
+```
 
-# PHP
-docker build -t my-php-app -f Dockerfile .
+### Rust
+```shell
+docker build -t my-rust-app:latest .
+```
+Запуск контейнера:
+```shell
+docker run --rm my-rust-app:latest
+```
 
-# C++
-docker build -t my-cpp-app -f Dockerfile .
+### PHP
+```shell
+docker build -t my-php-app:latest .
+```
+Запустить контейнер
+```shell
+docker run --rm my-php-app:latest
+```
+
+### C++
+
+```shell
+docker build -t my-cpp-app:latest .
+```
+Запустить контейнер
+```shell
+docker run --rm my-cpp-app:latest
 ```
