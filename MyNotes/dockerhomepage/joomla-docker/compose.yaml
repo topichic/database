@@ -1,0 +1,47 @@
+services:
+  # Сервис базы данных MariaDB
+  db:
+    image: mariadb:11.5.2
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: example_root_password
+      MYSQL_DATABASE: joomla_db
+      MYSQL_USER: joomla_user
+      MYSQL_PASSWORD: joomla_password
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - joomla-network
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # Сервис Joomla
+  joomla:
+    # === ИЗМЕНЕНО: ждём успешного healthcheck ===
+    depends_on:
+      db:
+        condition: service_healthy
+    image: joomla:latest
+    ports:
+      - "8082:80"
+    restart: unless-stopped
+    environment:
+      JOOMLA_DB_HOST: db:3306
+      JOOMLA_DB_USER: joomla_user
+      JOOMLA_DB_PASSWORD: joomla_password
+      JOOMLA_DB_NAME: joomla_db
+    volumes:
+      - joomla_data:/var/www/html
+    networks:
+      - joomla-network
+
+networks:
+  joomla-network:
+
+volumes:
+  db_data:
+  joomla_data:
