@@ -1,265 +1,102 @@
-# Мои заметки
+# 🚀 DevOps Portfolio — CI/CD Pipeline Examples
 
-## Введение в командную строку Bash
+Коллекция демонстрационных проектов с настроенными CI/CD пайплайнами на **GitHub Actions**
 
-### Управление Терминалом
+---
 
-Сдвинуть вверх лог выполненных ранее команд
+## 📋 Оглавление
 
-**Crtl-L**
+- [Проекты](#-проекты)
+- [Скриншоты пайплайнов](#-скриншоты-cicd-пайплайнов)
+- [Что реализовано в каждом проекте](#-что-реализовано-в-каждом-проекте)
+- [Быстрый старт](#-быстрый-старт)
+- [Структура проекта](#-структура-проекта)
+- [Используемые технологии](#-используемые-технологии)
+- [Лицензия](#-лицензия)
 
-или
+---
 
-```shell
-clear
-```
+## 📊 Проекты
 
-```shell
-history
-```
+| # | Язык/Стек | Репозиторий | CI/CD статус |
+|---|-----------|-------------|---------------|
+| 1 | <img src="https://img.icons8.com/color/48/000000/nodejs.png" width="20"/> **Node.js** | [my-node-app](https://github.com/topichic/my-node-app.git) | ✅ [![Node.js CI](https://github.com/topichic/my-node-app/actions/workflows/ci.yml/badge.svg)](https://github.com/topichic/my-node-app/actions/workflows/ci.yml) |
+| 2 | <img src="https://img.icons8.com/color/48/000000/golang.png" width="20"/> **Go** | [my-go-app](https://github.com/topichic/my-go-app.git) | ✅ [![Go CI](https://github.com/topichic/my-go-app/actions/workflows/ci.yml/badge.svg)](https://github.com/topichic/my-go-app/actions/workflows/ci.yml) |
+| 3 | <img src="https://img.icons8.com/color/48/000000/rust.png" width="20"/> **Rust + JS** | [my-rust-app](https://github.com/topichic/my-rust-app.git) | ✅ [![Rust CI](https://github.com/topichic/my-rust-app/actions/workflows/ci.yml/badge.svg)](https://github.com/topichic/my-rust-app/actions/workflows/ci.yml) |
+| 4 | <img src="https://img.icons8.com/color/48/000000/php.png" width="20"/> **PHP** | [my-php-app](https://github.com/topichic/my-php-app.git) | ✅ [![PHP CI](https://github.com/topichic/my-php-app/actions/workflows/ci.yml/badge.svg)](https://github.com/topichic/my-php-app/actions/workflows/ci.yml) |
+| 5 | <img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" width="20"/> **C++** | [my-cpp-app](https://github.com/topichic/my-cpp-app.git) | ✅ [![C++ CI](https://github.com/topichic/my-cpp-app/actions/workflows/ci.yml/badge.svg)](https://github.com/topichic/my-cpp-app/actions/workflows/ci.yml) |
 
-Выполнить нужную коману из списка History
-```shell
-!53
-```
+---
 
-где 53  - это № команды из списка
+## 📸 Скриншоты CI/CD пайплайнов
 
-Выполнить предыдущую команду
-```shell
-!!
-```
+| Приложение | Скриншоты |
+|:-----------|:----------|
+| **Node.js** | ![NodeJS1](/MyNotes/pipelines/img/NodeJS1.png)<br>![NodeJS2](/MyNotes/pipelines/img/NodeJS2.png) |
+| **Go** | ![go](/MyNotes/pipelines/img/go.png)<br>![go2](/MyNotes/pipelines/img/go2.png)<br>![go3](/MyNotes/pipelines/img/go3.png)<br>![go4](/MyNotes/pipelines/img/go4.png) |
+| **Rust + JavaScript** | ![rust-js](/MyNotes/pipelines/img/rust-js.png)<br>![rust-js2](/MyNotes/pipelines/img/rust-js2.png)<br>![rust-js3](/MyNotes/pipelines/img/rust-js3.png) |
+| **PHP** | ![php](/MyNotes/pipelines/img/php.png)<br>![php2](/MyNotes/pipelines/img/php2.png) |
+| **C++** | ![my-cpp-app](/MyNotes/pipelines/img/my-cpp-app.png)<br>![my-cpp-app2](/MyNotes/pipelines/img/my-cpp-app2.png) |
 
-Прервать выполнение запущенной команды
+---
 
-**Ctrl+C**
+## ⚙️ Что реализовано в каждом проекте
 
-### Файловые операции
+### ✅ Node.js
 
-Показать путь текущей директории
-```shell
-pwd
-```
+| Шаг пайплайна | Описание |
+|---------------|----------|
+| Установка зависимостей | `npm ci` — чистая установка из package-lock.json |
+| Линтинг | ESLint проверка кода |
+| Запуск тестов | Jest тесты с coverage |
+| Сборка Docker образа | Многоступенчатая сборка |
+| Публикация | Push в Docker registry (опционально) |
 
-Показать содержимое текущего каталога
-```shell
-ls
-```
+### ✅ Go
 
-Показать подробное содержимое текущего каталога
-```shell
-ll
-```
+| Шаг пайплайна | Описание |
+|---------------|----------|
+| Кэширование модулей | Кэш для Go modules |
+| Линтинг | golangci-lint — быстрый линтер |
+| Запуск тестов | `go test -race -cover` с проверкой гонок |
+| Сборка бинарника | Статическая сборка |
+| Docker сборка | Многоступенчатая (builder + scratch/alpine) |
 
-Показать подробное содержимое указанного каталога
-```shell
-ll dir_name
-```
+### ✅ Rust + JavaScript
 
-Показать содержимое в виде дерева
-```shell
-tree
-```
+| Шаг пайплайна | Описание |
+|---------------|----------|
+| Форматирование | `rustfmt` — проверка стиля |
+| Линтинг | `clippy` — дополнительные предупреждения |
+| Запуск тестов | `cargo test` — модульные и интеграционные |
+| Сборка | `cargo build --release` |
+| WASM (опционально) | Сборка в WebAssembly для браузера |
 
-Вернуться в домашний каталог текущего пользователя
-```shell
-cd ~
-```
+### ✅ PHP
 
-Вернуться обратно
-```shell
-cd -
-```
+| Шаг пайплайна | Описание |
+|---------------|----------|
+| Установка зависимостей | `composer install` |
+| Линтинг | PHP_CodeSniffer (PSR-12 стандарт) |
+| Запуск тестов | PHPUnit тесты |
+| Docker сборка | Apache + PHP образ |
 
-**/** - знак корня директории
+### ✅ C++
 
-**~** - знак домашнего каталога пользователя
+| Шаг пайплайна | Описание |
+|---------------|----------|
+| Установка компилятора | gcc / clang (на выбор) |
+| CMake конфигурация | Генерация build системы |
+| Сборка | `make` / `cmake --build` |
+| Запуск тестов | CTest / GoogleTest |
+| Valgrind (опционально) | Проверка утечек памяти |
 
-Зайти в нужный каталог
-```shell
-cd dir_name
-```
+---
 
-Выйти из текущего каталога на 1 шаг вверх
-```shell
-cd ..
-```
+## 🚀 Быстрый старт
 
-Выйти из текущего каталога на 2 шага вверх
-```shell
-cd ../..
-```
+### Клонирование репозитория
 
-### Linux
-
-Показать версию Linux
-```shell
-lsb_release -a
-```
-
-Показать красивую ин-фу по системе
-```shell
-neofetch
-```
-
-Показать подробную ин-фу по системе
-```shell
-inxi -F
-```
-
-Показать Диспетчер задач
-```shell
-htop
-```
-
-Показать t CPU/GPU и скорость вентиляторов
-```shell
-sensors
-```
-
-Показать состояние оперативной памяти и подкачки (swap)
-```shell
-free -h
-```
-
-Показать ин-фу о текущем пользователе
-```shell
-w
-```
-
-или
-```shell
-id
-```
-
-Доступные группы
-```shell
-groups
-```
-
-### Софт
-
-Календарь
-```shell
-cal
-```
-
-или на указанны год
-```shell
-cal 2026
-```
-
-Показать время
-```shell
-date
-```
-
-Текстовые редакторы
-
-**Nano**
-```shell
-nano file_name.txt
-```
-
-Сохранить по **Cttrl+S**, выйти по **Ctrl+X**
-
-```shell
-micro file_name.txt
-```
-
-Сохранить по **Cttrl+S**, выйти по **Ctrl+Q**
-
-Запустить Python-скрипт
-```shell
-python3 hello.py
-```
-
-Программа на C++
-```cpp
-#include <iostream>
-#include <unistd.h>
-
-int main() {
-	puts("Hello\nЖдём 2 ~сек...");
-	usleep(2000'000);
-	return 0;
-}
-```
-Скомпилировать код на C++
-```shell
-g++ main.cpp -o main.bin
-```
-
-Запустить бинарный файл
-```shell
-./main.bin
-```
-
-Показать используемые программой библиотеки
-```shell
-ldd ./main.bin
-```
-
-Покать время выполнения скрипта или программы
-```shell
-time ./main.bin
-```
-
-Показать таблицу ASCII
-```shell
-ascii -d
-```
-
--b покажет двоичный код
-
-### Сеть
-
-Показать имя компьютера
-```shell
-hostname
-```
-
-Показать ip
-```shell
-hostname -I
-```
-
-Покать состояние всех сетевых интерфейсов
-```shell
-ip -c a
-```
-
-или кратко
-```shell
-ip -c r
-```
-
-Пинг
-```shell
-ping 8.8.8.8
-```
-
-или
-```shell
-ping ya.ru
-```
-
-Пинг заданное кол-во раз
-```shell
-ping -c 6 ya.ru
-```
-
-Показать ин-фу по домену
-```shell
-whois ozon.ru
-```
-
-Показать порты
-```shell
-netstat -an
-```
-
-Показать сетевые маршруты
-```shell
-route
-```
+```bash
+git clone https://github.com/topichic/my-node-app.git
+cd my-node-app
