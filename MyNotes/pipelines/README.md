@@ -38,7 +38,7 @@
 | **Rust + JavaScript** | ![rust-js](/MyNotes/pipelines/img/rust-js.png)<br>![rust-js2](/MyNotes/pipelines/img/rust-js2.png)<br>![rust-js3](/MyNotes/pipelines/img/rust-js3.png) |
 | **PHP** | ![php2](/MyNotes/pipelines/img/php2.png) |
 | **C++** | ![my-cpp-app](/MyNotes/pipelines/img/my-cpp-app.png)<br>![my-cpp-app2](/MyNotes/pipelines/img/my-cpp-app2.png) |
-| **Java + Maven** | ![java](/MyNotes/pipelines/img/java.png)<br>![java2](/MyNotes/pipelines/img/java2.png)<br>![java3](/MyNotes/pipelines/img/java3.png) |
+| **Java + Maven** | ![java](/MyNotes/pipelines/img/java.png)<br>![java2](/MyNotes/pipelines/img/java2.png) |
 
 ---
 
