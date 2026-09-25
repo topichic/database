@@ -32,10 +32,10 @@
 
 | Приложение | Скриншоты |
 |:-----------|:----------|
-| **Node.js** | ![NodeJS1](/MyNotes/pipelines/img/Nodejs.png)<br>![NodeJS2](/MyNotes/pipelines/img/Nodejs2.png) |
+| **Node.js** | ![NodeJS1](/MyNotes/pipelines/img/nodejs.png)<br>![NodeJS2](/MyNotes/pipelines/img/nodejs2.png) |
 | **Go** | ![go](/MyNotes/pipelines/img/go.png)<br>![go2](/MyNotes/pipelines/img/go2.png)<br>![go3](/MyNotes/pipelines/img/go3.png)<br>![go4](/MyNotes/pipelines/img/go4.png) |
 | **Rust + JavaScript** | ![rust-js](/MyNotes/pipelines/img/rust-js.png)<br>![rust-js2](/MyNotes/pipelines/img/rust-js2.png)<br>![rust-js3](/MyNotes/pipelines/img/rust-js3.png) |
-| **PHP** | ![php](/MyNotes/pipelines/img/php.png)<br>![php2](/MyNotes/pipelines/img/php2.png) |
+| **PHP** |![php2](/MyNotes/pipelines/img/php2.png) |
 | **C++** | ![my-cpp-app](/MyNotes/pipelines/img/my-cpp-app.png)<br>![my-cpp-app2](/MyNotes/pipelines/img/my-cpp-app2.png) |
 
 ---
