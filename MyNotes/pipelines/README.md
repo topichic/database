@@ -26,7 +26,6 @@
 | 4 | <img src="https://img.icons8.com/color/48/000000/php.png" width="20"/> **PHP** | [my-php-app](https://github.com/topichic/my-php-app.git) | ✅ [![PHP CI](https://github.com/topichic/my-php-app/actions/workflows/ci.yml/badge.svg)](https://github.com/topichic/my-php-app/actions/workflows/ci.yml) |
 | 5 | <img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" width="20"/> **C++** | [my-cpp-app](https://github.com/topichic/my-cpp-app.git) | ✅ [![C++ CI](https://github.com/topichic/my-cpp-app/actions/workflows/ci.yml/badge.svg)](https://github.com/topichic/my-cpp-app/actions/workflows/ci.yml) |
 | 6 | <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" width="20"/> **Java + Maven** | [my-java-app](https://github.com/topichic/my-java-app.git) | ✅ [![Java CI](https://github.com/topichic/my-java-app/actions/workflows/ci.yml/badge.svg)](https://github.com/topichic/my-java-app/actions/workflows/ci.yml) |
-| 7 | <img src="https://img.icons8.com/color/48/000000/python.png" width="20"/> **Python** | [my-python-app](https://github.com/topichic/my-python-app.git) | ✅ [![Python CI](https://github.com/topichic/my-python-app/actions/workflows/ci.yml/badge.svg)](https://github.com/topichic/my-python-app/actions/workflows/ci.yml) |
 
 ---
 
@@ -40,7 +39,6 @@
 | **PHP** | ![php2](/MyNotes/pipelines/img/php2.png) |
 | **C++** | ![my-cpp-app](/MyNotes/pipelines/img/my-cpp-app.png)<br>![my-cpp-app2](/MyNotes/pipelines/img/my-cpp-app2.png) |
 | **Java + Maven** | ![java](/MyNotes/pipelines/img/java.png)<br>![java2](/MyNotes/pipelines/img/java2.png)<br>![java3](/MyNotes/pipelines/img/java3.png) |
-| **Python** | ![python](/MyNotes/pipelines/img/python.png)<br>![python2](/MyNotes/pipelines/img/python2.png)<br>![python3](/MyNotes/pipelines/img/python3.png) |
 
 ---
 
@@ -106,20 +104,6 @@
 | Docker сборка | Многоступенчатая (Maven builder + JRE Alpine) |
 | Запуск контейнера | `docker run --rm hello-java` |
 
-### ✅ Python
-
-| Шаг пайплайна | Описание |
-|---------------|----------|
-| Установка Python | Python 3.12 через `actions/setup-python@v5` |
-| Кэширование pip | Кэш `~/.cache/pip` для ускорения сборки |
-| Установка зависимостей | `pip install -r requirements.txt` |
-| Линтинг | `ruff check` (или flake8) — быстрая проверка кода |
-| Форматирование | `ruff format --check` (или black --check) |
-| Типизация | `mypy` — статическая проверка типов (опционально) |
-| Запуск тестов | `pytest --cov` — тесты с покрытием |
-| Docker сборка | Многоступенчатая (builder + python:slim) |
-| Запуск контейнера | `docker run --rm my-python-app` |
-
 ---
 
 ## 🚀 Быстрый старт
@@ -150,7 +134,3 @@ cd my-cpp-app
 # Java + Maven
 git clone https://github.com/topichic/my-java-app.git
 cd my-java-app
-
-# Python
-git clone https://github.com/topichic/my-python-app.git
-cd my-python-app
